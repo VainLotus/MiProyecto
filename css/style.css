@@ -10,8 +10,8 @@
 }
 
 body {
-    background-color: black;
-    background-image: url(/img/grandbarberclub.jpg);
+    background-color: blue;
+    background-image: url(../img/grandbarberclub.jpg);
     background-size: cover;
 }
 
