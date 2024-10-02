@@ -32,12 +32,12 @@ main.index{
 main.sobrenosotros {
         .container2 {
             display: grid;
-            grid-template-columns: 1fr 1fr 1fr; // Cambia esto si es necesario
-            grid-template-rows: 1fr; // Cambia a repeat(1, auto) si es solo una fila
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
             grid-template-areas:
                 "video texto texto"
                 "video texto texto";
-            gap: 10px; // Espacio entre elementos, si es necesario
+            gap: 10px;
         }
     
         .video {
@@ -45,7 +45,7 @@ main.sobrenosotros {
     
             iframe {
                 width: 100%;
-                height: 100%; // O ajusta esto según lo que necesites
+                height: 100%;
                 border: none;
             }
         }

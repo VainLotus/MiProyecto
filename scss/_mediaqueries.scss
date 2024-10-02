@@ -1,11 +1,12 @@
-@media only screen and (max-width: 768px) {
+@media screen and (max-width: 768px) {
     footer {
         text-align: center;
         justify-items: center;
     }
 
     .container2 {
-        grid-template-columns: 1fr 1fr; 
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
         grid-template-areas:
             "video video"
             "texto texto";
@@ -16,7 +17,7 @@
     }
 }
 
-@media only screen and (max-width: 480px) {
+@media screen and (max-width: 480px) {
     header {
         nav {
             font-size: 2rem;

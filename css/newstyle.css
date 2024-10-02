@@ -113,7 +113,7 @@ main.cortes div img:hover {
 main.sobrenosotros .container2 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr;
+  grid-template-rows: 1fr 1fr;
   grid-template-areas: "video texto texto" "video texto texto";
   gap: 10px;
 }
@@ -150,20 +150,21 @@ footer ul li img {
   border-radius: 150px solid black;
 }
 
-@media only screen and (max-width: 768px) {
+@media screen and (max-width: 768px) {
   footer {
     text-align: center;
     justify-items: center;
   }
   .container2 {
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
     grid-template-areas: "video video" "texto texto";
   }
   .texto p {
     font-size: 1.8rem;
   }
 }
-@media only screen and (max-width: 480px) {
+@media screen and (max-width: 480px) {
   header nav {
     font-size: 2rem;
   }
