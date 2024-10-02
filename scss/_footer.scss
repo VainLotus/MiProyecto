@@ -1,0 +1,14 @@
+footer{
+    display: inline-flex;
+    justify-content: center;
+    ul li{
+        list-style-type: none;
+        margin: 15px;
+        display: inline-flex;
+        justify-content: space-between;
+        img{
+            width: 45px;
+            border-radius:150px solid $oscuro;
+        }
+    }
+}

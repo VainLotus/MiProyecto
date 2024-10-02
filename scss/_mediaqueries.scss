@@ -1,0 +1,39 @@
+@media only screen and (max-width:768px){
+    footer{
+        text-align: center;
+        justify-items: center;
+    }
+    .container2 {  
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas:
+        "video"
+        "video"
+        "texto"
+        "texto";
+    }
+}
+@media only screen and (max-width:480px){
+    header{
+        nav{
+            font-size: 2rem;
+            a{
+                -webkit-text-stroke-width: 0.2rem;
+                -webkit-text-stroke-color: $oscuro;
+                &:visited{
+                    color: white;
+                    -webkit-text-stroke-width: 0.3rem;
+                    -webkit-text-stroke-color: $oscuro;
+                    }
+                .navbar-brand{
+                    align-self: center;
+                }
+            }
+            }
+        }
+    footer{
+        text-align: center;
+        justify-items: center;
+    }
+}

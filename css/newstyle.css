@@ -1,0 +1,185 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: pricedown-bl;
+  src: url(../font/pricedown-bl.ttf);
+}
+body {
+  background-color: blue;
+  background-image: url(../img/grandbarberclub.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+body h1 {
+  font-family: pricedown-bl;
+  font-size: 3.5rem;
+  color: white;
+  -webkit-text-stroke-width: 0.3rem;
+  -webkit-text-stroke-color: black;
+  text-align: center;
+}
+body h2 {
+  font-family: pricedown-bl;
+  font-size: 3rem;
+  color: white;
+  -webkit-text-stroke-width: 4.5px;
+  -webkit-text-stroke-color: black;
+  text-align: center;
+}
+body h3 {
+  font-family: pricedown-bl;
+  font-size: 2rem;
+  color: white;
+  -webkit-text-stroke-width: 3.5px;
+  -webkit-text-stroke-color: black;
+  text-align: left;
+}
+body h4 {
+  font-family: pricedown-bl;
+  font-size: 1.5rem;
+  color: white;
+  -webkit-text-stroke-width: 1.5px;
+  -webkit-text-stroke-color: black;
+  text-align: left;
+}
+body h5 {
+  font-family: pricedown-bl;
+  font-size: 1.5rem;
+  color: white;
+  text-align: center;
+  -webkit-text-stroke-width: 1.5px;
+  -webkit-text-stroke-color: black;
+}
+body p {
+  font-family: pricedown-bl;
+  font-size: 1rem;
+  color: white;
+  text-align: center;
+  -webkit-text-stroke-width: 1.5px;
+  -webkit-text-stroke-color: black;
+}
+
+header nav {
+  background-color: blue;
+  background-image: url(../img/border.jpg);
+  font-family: pricedown-bl;
+  font-size: 3rem;
+}
+header nav a {
+  font-family: pricedown-bl;
+  font-size: 3rem;
+  color: white;
+  -webkit-text-stroke-width: 0.3rem;
+  -webkit-text-stroke-color: black;
+}
+header nav a:visited {
+  color: white;
+  -webkit-text-stroke-width: 0.3rem;
+  -webkit-text-stroke-color: black;
+}
+
+main.index div img {
+  width: 100vw;
+  height: 100vh;
+  border: 10px solid black;
+  border-radius: 2%;
+}
+
+main.container2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-auto-columns: 1fr;
+  grid-auto-rows: 1fr;
+  grid-auto-flow: row;
+  grid-template-areas: "video texto texto" "video texto texto";
+}
+
+.video {
+  grid-area: video;
+}
+
+.texto {
+  grid-area: texto;
+  background-color: white;
+  opacity: 0.9;
+  border: 15px black double;
+}
+.texto p {
+  font-size: 2rem;
+}
+
+main.cortes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+main.cortes div img {
+  width: 250px;
+  opacity: 0.5;
+  object-fit: cover;
+  border: double gray 2px;
+}
+main.cortes div img:hover {
+  opacity: 1;
+  border: white 2px solid;
+  border-radius: 10px;
+}
+
+footer {
+  display: inline-flex;
+  justify-content: center;
+}
+footer ul li {
+  list-style-type: none;
+  margin: 15px;
+  display: inline-flex;
+  justify-content: space-between;
+}
+footer ul li img {
+  width: 45px;
+  border-radius: 150px solid black;
+}
+
+@media only screen and (max-width: 768px) {
+  footer {
+    text-align: center;
+    justify-items: center;
+  }
+  .container2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "video" "video" "texto" "texto";
+  }
+}
+@media only screen and (max-width: 480px) {
+  header nav {
+    font-size: 2rem;
+  }
+  header nav a {
+    -webkit-text-stroke-width: 0.2rem;
+    -webkit-text-stroke-color: black;
+  }
+  header nav a:visited {
+    color: white;
+    -webkit-text-stroke-width: 0.3rem;
+    -webkit-text-stroke-color: black;
+  }
+  header nav a .navbar-brand {
+    align-self: center;
+  }
+  footer {
+    text-align: center;
+    justify-items: center;
+  }
+}
+
+/*# sourceMappingURL=newstyle.css.map */

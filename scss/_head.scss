@@ -1,0 +1,20 @@
+header{
+    nav{
+        background-color:$body-color ;
+        background-image: url(../img/border.jpg);
+        font-family: pricedown-bl;
+        font-size: 3rem;
+        a{
+            font-family: pricedown-bl;
+            font-size: 3rem;
+            color: $claro;
+            -webkit-text-stroke-width: 0.3rem;
+            -webkit-text-stroke-color: $oscuro;
+            &:visited{
+                color: $claro;
+                -webkit-text-stroke-width: 0.3rem;
+                -webkit-text-stroke-color: $oscuro;
+                }
+        }
+    }
+}

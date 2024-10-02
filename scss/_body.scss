@@ -1,0 +1,57 @@
+body{
+    background-color: $body-color;
+    background-image: url(../img/grandbarberclub.jpg);
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    h1 {
+        font-family: pricedown-bl;
+        font-size: 3.5rem;
+        color: $claro;
+        -webkit-text-stroke-width: 0.3rem;
+        -webkit-text-stroke-color: $oscuro;
+        text-align: center;
+    }
+    
+    h2 {
+        font-family: pricedown-bl;
+        font-size: 3rem;
+        color: $claro;
+        -webkit-text-stroke-width: 4.5px;
+        -webkit-text-stroke-color: $oscuro;
+        text-align: center;
+    }
+    
+    h3 {
+        font-family: pricedown-bl;
+        font-size: 2rem;
+        color: $claro;
+        -webkit-text-stroke-width: 3.5px;
+        -webkit-text-stroke-color: $oscuro;
+        text-align: left;
+    }
+    
+    h4 {
+        font-family: pricedown-bl;
+        font-size: 1.5rem;
+        color: $claro;
+        -webkit-text-stroke-width: 1.5px;
+        -webkit-text-stroke-color: $oscuro;
+        text-align: left;
+    }
+    h5{ font-family: pricedown-bl;
+        font-size: 1.5rem;
+        color: $claro;
+        text-align: center;
+        -webkit-text-stroke-width: 1.5px;
+        -webkit-text-stroke-color: $oscuro;
+    }
+    p{
+        font-family: pricedown-bl;
+        font-size: 1rem;
+        color: $claro;
+        text-align: center;
+        -webkit-text-stroke-width: 1.5px;
+        -webkit-text-stroke-color: $oscuro;
+    }
+}

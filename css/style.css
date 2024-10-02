@@ -17,7 +17,7 @@ body {
 
 .contacto {
     background-color: white;
-    width: 100vw;
+    width: 99vw;
     height: 70vh;
     margin: .5rem;
     padding: 1rem;
@@ -28,13 +28,12 @@ body {
 main div img {
     width: 100vw;
     height: 100vh;
-    margin: 0 auto;
     border: 10px solid black;
-    border-radius: 5px;
+    border-radius: 2%;
 }
 
 
-header nav {
+header nav{
     background-image: url(../img/border.jpg);
 }
 
@@ -114,7 +113,8 @@ footer img {
     width: 45px;
     border-radius: 150px;
 }
-.container {  display: grid;
+.container {  
+    display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1.4fr 0.4fr 1.2fr;
     grid-auto-columns: 1fr;
