@@ -90,30 +90,6 @@ main.index div img {
   border-radius: 2%;
 }
 
-main.container2 {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  grid-auto-columns: 1fr;
-  grid-auto-rows: 1fr;
-  grid-auto-flow: row;
-  grid-template-areas: "video texto texto" "video texto texto";
-}
-
-.video {
-  grid-area: video;
-}
-
-.texto {
-  grid-area: texto;
-  background-color: white;
-  opacity: 0.9;
-  border: 15px black double;
-}
-.texto p {
-  font-size: 2rem;
-}
-
 main.cortes {
   display: flex;
   flex-wrap: wrap;
@@ -128,9 +104,35 @@ main.cortes div img {
   border: double gray 2px;
 }
 main.cortes div img:hover {
+  transform: scale(2);
   opacity: 1;
   border: white 2px solid;
   border-radius: 10px;
+}
+
+main.sobrenosotros .container2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "video texto texto" "video texto texto";
+  gap: 10px;
+}
+main.sobrenosotros .video {
+  grid-area: video;
+}
+main.sobrenosotros .video iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+main.sobrenosotros .texto {
+  grid-area: texto;
+  background-color: white;
+  opacity: 0.9;
+  border: 15px black double;
+}
+main.sobrenosotros .texto p {
+  font-size: 2rem;
 }
 
 footer {
@@ -154,10 +156,11 @@ footer ul li img {
     justify-items: center;
   }
   .container2 {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas: "video" "video" "texto" "texto";
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "video video" "texto texto";
+  }
+  .texto p {
+    font-size: 1.8rem;
   }
 }
 @media only screen and (max-width: 480px) {
@@ -173,8 +176,15 @@ footer ul li img {
     -webkit-text-stroke-width: 0.3rem;
     -webkit-text-stroke-color: black;
   }
-  header nav a .navbar-brand {
+  header nav .navbar-brand {
     align-self: center;
+  }
+  .container2 {
+    grid-template-columns: 1fr;
+    grid-template-areas: "video" "texto";
+  }
+  .texto p {
+    font-size: 1.5rem;
   }
   footer {
     text-align: center;

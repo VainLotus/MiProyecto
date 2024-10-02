@@ -1,38 +1,55 @@
-@media only screen and (max-width:768px){
-    footer{
+@media only screen and (max-width: 768px) {
+    footer {
         text-align: center;
         justify-items: center;
     }
-    .container2 {  
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
+
+    .container2 {
+        grid-template-columns: 1fr 1fr; 
         grid-template-areas:
-        "video"
-        "video"
-        "texto"
-        "texto";
+            "video video"
+            "texto texto";
+    }
+
+    .texto p {
+        font-size: 1.8rem;
     }
 }
-@media only screen and (max-width:480px){
-    header{
-        nav{
+
+@media only screen and (max-width: 480px) {
+    header {
+        nav {
             font-size: 2rem;
-            a{
+
+            a {
                 -webkit-text-stroke-width: 0.2rem;
                 -webkit-text-stroke-color: $oscuro;
-                &:visited{
+
+                &:visited {
                     color: white;
                     -webkit-text-stroke-width: 0.3rem;
                     -webkit-text-stroke-color: $oscuro;
-                    }
-                .navbar-brand{
-                    align-self: center;
                 }
             }
+
+            .navbar-brand {
+                align-self: center;
             }
         }
-    footer{
+    }
+
+    .container2 {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "video"
+            "texto";
+    }
+
+    .texto p {
+        font-size: 1.5rem; 
+    }
+
+    footer {
         text-align: center;
         justify-items: center;
     }
