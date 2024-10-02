@@ -7,6 +7,27 @@ main.index{
         border-radius: 2%;}
         }
     }
+    main.cortes{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        div{
+            img{
+                width: 250px;
+                opacity: 0.5;
+                object-fit: cover;
+                border: double gray 2px;
+                &:hover{
+                    transform: scale(2);
+                opacity: 1;
+                border: white 2px solid;
+                border-radius: 10px;
+                }
+            }
+        }
+    }
 
 main.container2 {  
         display: grid;
