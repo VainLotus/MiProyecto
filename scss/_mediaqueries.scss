@@ -1,19 +1,42 @@
 @media screen and (max-width: 768px) {
+.container {  
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+            "Texto"
+            "Texto" 
+            "Texto-1"
+            "Video"
+            "Video";
+    }
+    
+    .Video { grid-area: Video; }
+    
+    .Texto { grid-area: Texto;
+        background-image: url(https://img.freepik.com/foto-gratis/herramientas-salon-marco-vintage-mesa-madera-trabajos-concepto-carrera_53876-143259.jpg);
+        background-size: cover;
+        opacity: .9;
+        border: burlywood 15px double;
+        text-align: center;
+        p{
+            font-size: 2rem;
+        }
+    }
+    
+    .Texto-1 { grid-area: Texto-1;
+        background-image: url(https://img.freepik.com/foto-gratis/herramientas-salon-marco-vintage-mesa-madera-trabajos-concepto-carrera_53876-143259.jpg);
+        background-size: cover;
+        opacity: .9;
+        border: burlywood 15px double;
+        text-align: center;
+        p{
+            font-size: 2rem;
+        }
+    }
     footer {
         text-align: center;
         justify-items: center;
-    }
-
-    .container2 {
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr;
-        grid-template-areas:
-            "video video"
-            "texto texto";
-    }
-
-    .texto p {
-        font-size: 1.8rem;
     }
 }
 
@@ -37,17 +60,6 @@
                 align-self: center;
             }
         }
-    }
-
-    .container2 {
-        grid-template-columns: 1fr;
-        grid-template-areas:
-            "video"
-            "texto";
-    }
-
-    .texto p {
-        font-size: 1.5rem; 
     }
 
     footer {
