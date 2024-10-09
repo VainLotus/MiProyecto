@@ -103,8 +103,16 @@ main.cortes{
 
 .bartext { grid-area: bartext; 
     background-image: url(https://img.freepik.com/foto-gratis/herramientas-salon-marco-vintage-mesa-madera-trabajos-concepto-carrera_53876-143259.jpg);
+    border: $body-color double 15px;
+    p{
+        font-size: 1.3rem;
+    }
 }
 
 .bartext1 { grid-area: bartext1; 
     background-image: url(https://img.freepik.com/foto-gratis/herramientas-salon-marco-vintage-mesa-madera-trabajos-concepto-carrera_53876-143259.jpg);
+    border: $body-color double 15px;
+    p{
+        font-size: 1.3rem;
+    }
 }

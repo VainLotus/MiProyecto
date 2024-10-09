@@ -191,11 +191,19 @@ main.cortes div img:hover {
 .bartext {
   grid-area: bartext;
   background-image: url(https://img.freepik.com/foto-gratis/herramientas-salon-marco-vintage-mesa-madera-trabajos-concepto-carrera_53876-143259.jpg);
+  border: rgb(10, 10, 51) double 15px;
+}
+.bartext p {
+  font-size: 1.3rem;
 }
 
 .bartext1 {
   grid-area: bartext1;
   background-image: url(https://img.freepik.com/foto-gratis/herramientas-salon-marco-vintage-mesa-madera-trabajos-concepto-carrera_53876-143259.jpg);
+  border: rgb(10, 10, 51) double 15px;
+}
+.bartext1 p {
+  font-size: 1.3rem;
 }
 
 footer {
@@ -217,7 +225,7 @@ footer ul li img {
     grid-auto-columns: 1fr;
     grid-auto-rows: 1fr;
     grid-template-columns: 1fr;
-    grid-template-rows: 0.3fr 1fr 1fr;
+    grid-template-rows: 0.3fr 1fr 0.5fr;
     gap: 0px 0px;
     grid-template-areas: "barvid" "bartext" "bartext1";
     justify-content: space-around;
@@ -232,33 +240,32 @@ footer ul li img {
   .bartext {
     grid-area: bartext;
     border: rgb(10, 10, 51) double 15px;
+    justify-content: space-between;
   }
   .bartext1 {
     grid-area: bartext1;
     border: rgb(10, 10, 51) double 15px;
+    justify-content: space-between;
+    height: auto;
   }
 }
 @media screen and (max-width: 480px) {
-  .cursos {
+  .curse {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 0.3fr 1fr 1fr;
-    grid-auto-columns: 1fr;
-    grid-auto-rows: 1fr;
-    gap: 0px 0px;
-    grid-auto-flow: row;
-    justify-content: space-around;
-    justify-items: stretch;
-    align-items: stretch;
+    grid-template-rows: auto auto;
+    align-items: start;
     grid-template-areas: "curso_tit" "curso_img" "curso_txt";
-    width: 100vw;
-    height: auto;
   }
   .curso_tit {
     grid-area: curso_tit;
   }
   .curso_img {
     grid-area: curso_img;
+  }
+  .curso_img img {
+    width: 100%;
+    height: auto;
   }
   .curso_txt {
     grid-area: curso_txt;

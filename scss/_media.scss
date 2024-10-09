@@ -3,7 +3,7 @@
         grid-auto-columns: 1fr; 
 grid-auto-rows: 1fr; 
 grid-template-columns: 1fr; 
-grid-template-rows: .3fr 1fr 1fr; 
+grid-template-rows: .3fr 1fr .5fr; 
 gap: 0px 0px; 
 grid-template-areas: 
     "barvid"
@@ -20,36 +20,41 @@ align-items: stretch;
 }
 .bartext { grid-area: bartext;
     border: $body-color double 15px;
+    justify-content: space-between;
 }
 
 .bartext1 { grid-area: bartext1;
     border: $body-color double 15px ;
+    justify-content: space-between;
+    height: auto;
 } 
 }
 @media  screen and (max-width:480px) {
-    .cursos {  
+    .curse {
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 0.3fr 1fr 1fr;
-        grid-auto-columns: 1fr;
-        grid-auto-rows: 1fr;
-        gap: 0px 0px;
-        grid-auto-flow: row;
-        justify-content: space-around;
-        justify-items: stretch;
-        align-items: stretch;
+        grid-template-rows: auto auto;
+        align-items: start;
         grid-template-areas:
             "curso_tit"
             "curso_img"
             "curso_txt";
-            width: 100vw;
+    }
+    
+    .curso_tit {
+        grid-area: curso_tit;
+    }
+    
+    .curso_img {
+        grid-area: curso_img;
+        img{
+            width: 100%;
             height: auto;
         }
+    }
     
-    .curso_tit { grid-area: curso_tit; }
-    
-    .curso_img { grid-area: curso_img; }
-    
-    .curso_txt { grid-area: curso_txt; } 
+    .curso_txt {
+        grid-area: curso_txt;
+    }
     
 }
