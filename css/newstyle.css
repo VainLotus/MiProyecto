@@ -88,7 +88,6 @@ main {
   background-position: auto;
   background-size: cover;
   background-repeat: no-repeat;
-  margin: 0;
 }
 
 main.index div img {
@@ -97,15 +96,41 @@ main.index div img {
   border-radius: 2%;
 }
 
-main.contenedor div img {
-  width: 100vw;
-  height: auto;
-  margin: 0;
+main.cursos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.2fr 1.8fr;
+  grid-auto-columns: 1fr;
+  grid-auto-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  justify-content: space-around;
+  justify-items: stretch;
+  align-items: stretch;
+  grid-template-areas: "curso_tit curso_tit" "curso_img curso_txt";
+}
+
+.curso_tit {
+  grid-area: curso_tit;
+}
+
+.curso_img {
+  grid-area: curso_img;
   border: 5px solid white;
 }
-main.contenedor div.cursos {
+
+.curso_txt {
+  grid-area: curso_txt;
   border-radius: 11%;
   background-image: url(../img/border.jpg);
+}
+.curso_txt h3 {
+  font-style: italic;
+  text-decoration: underline 5px black;
+  text-align: center;
+}
+.curso_txt p {
+  font-size: 1.5rem;
 }
 
 main.cortes {
@@ -204,15 +229,40 @@ footer ul li img {
     padding-bottom: 5px;
     padding-top: 5px;
   }
+  .bartext {
+    grid-area: bartext;
+    border: rgb(10, 10, 51) double 15px;
+  }
+  .bartext1 {
+    grid-area: bartext1;
+    border: rgb(10, 10, 51) double 15px;
+  }
 }
-.bartext {
-  grid-area: bartext;
-  border: rgb(10, 10, 51) double 15px;
-}
-
-.bartext1 {
-  grid-area: bartext1;
-  border: rgb(10, 10, 51) double 15px;
+@media screen and (max-width: 480px) {
+  .cursos {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.3fr 1fr 1fr;
+    grid-auto-columns: 1fr;
+    grid-auto-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    justify-content: space-around;
+    justify-items: stretch;
+    align-items: stretch;
+    grid-template-areas: "curso_tit" "curso_img" "curso_txt";
+    width: 100vw;
+    height: auto;
+  }
+  .curso_tit {
+    grid-area: curso_tit;
+  }
+  .curso_img {
+    grid-area: curso_img;
+  }
+  .curso_txt {
+    grid-area: curso_txt;
+  }
 }
 
 /*# sourceMappingURL=newstyle.css.map */

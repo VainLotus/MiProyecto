@@ -18,11 +18,38 @@ align-items: stretch;
         padding-top: 5px;
     }
 }
-    }
 .bartext { grid-area: bartext;
     border: $body-color double 15px;
 }
 
 .bartext1 { grid-area: bartext1;
     border: $body-color double 15px ;
+} 
+}
+@media  screen and (max-width:480px) {
+    .cursos {  
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.3fr 1fr 1fr;
+        grid-auto-columns: 1fr;
+        grid-auto-rows: 1fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        justify-content: space-around;
+        justify-items: stretch;
+        align-items: stretch;
+        grid-template-areas:
+            "curso_tit"
+            "curso_img"
+            "curso_txt";
+            width: 100vw;
+            height: auto;
+        }
+    
+    .curso_tit { grid-area: curso_tit; }
+    
+    .curso_img { grid-area: curso_img; }
+    
+    .curso_txt { grid-area: curso_txt; } 
+    
 }
