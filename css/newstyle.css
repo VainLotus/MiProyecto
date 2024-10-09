@@ -96,10 +96,10 @@ main.index div img {
   border-radius: 2%;
 }
 
-main.cursos {
+.curse {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 0.2fr 1.8fr;
+  grid-template-rows: 0.2fr 1.5fr 0.8fr;
   grid-auto-columns: 1fr;
   grid-auto-rows: 1fr;
   gap: 0px 0px;
@@ -107,7 +107,7 @@ main.cursos {
   justify-content: space-around;
   justify-items: stretch;
   align-items: stretch;
-  grid-template-areas: "curso_tit curso_tit" "curso_img curso_txt";
+  grid-template-areas: "curso_tit curso_tit" "curso_img curso_txt" "curso_txt2 curso_txt2";
 }
 
 .curso_tit {
@@ -117,12 +117,20 @@ main.cursos {
 .curso_img {
   grid-area: curso_img;
   border: 5px solid white;
+  height: auto;
+}
+.curso_img img {
+  width: 100%;
+  height: 100%;
 }
 
 .curso_txt {
   grid-area: curso_txt;
   border-radius: 11%;
-  background-image: url(../img/border.jpg);
+  background-image: url(../img/barbershow.jpg);
+  background-size: cover;
+  height: 100%;
+  border: double 5px red;
 }
 .curso_txt h3 {
   font-style: italic;
@@ -131,6 +139,36 @@ main.cursos {
 }
 .curso_txt p {
   font-size: 1.5rem;
+}
+
+.curso_txt2 {
+  grid-area: curso_txt2;
+  border-radius: 11%;
+  background-image: url(../img/border.jpg);
+  background-size: cover;
+  height: 100%;
+  border: double 5px red;
+}
+.curso_txt2 h3 {
+  font-style: italic;
+  text-decoration: underline 5px black;
+  text-align: center;
+}
+.curso_txt2 h3:hover {
+  transform: scale(2);
+}
+.curso_txt2 p {
+  font-size: 1.5rem;
+}
+
+.contacto {
+  background-color: white;
+  width: 99vw;
+  height: 70vh;
+  margin: 0.5rem;
+  padding: 1rem;
+  border: 15px solid rgb(0, 0, 0);
+  border-style: double;
 }
 
 main.cortes {
@@ -253,22 +291,25 @@ footer ul li img {
   .curse {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: auto auto;
-    align-items: start;
-    grid-template-areas: "curso_tit" "curso_img" "curso_txt";
+    grid-template-rows: 0.1fr 0.5fr 1fr 0.5fr;
+    grid-template-areas: "curso_tit" "curso_img" "curso_txt" "curso_txt2";
   }
   .curso_tit {
     grid-area: curso_tit;
   }
   .curso_img {
+    border-radius: 2%;
     grid-area: curso_img;
-  }
-  .curso_img img {
     width: 100%;
     height: auto;
   }
   .curso_txt {
+    border-radius: 2%;
     grid-area: curso_txt;
+  }
+  .curso_txt2 {
+    border-radius: 2%;
+    grid-area: curso_txt2;
   }
 }
 

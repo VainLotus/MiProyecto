@@ -33,12 +33,12 @@ align-items: stretch;
     .curse {
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: auto auto;
-        align-items: start;
+        grid-template-rows: .1fr .5fr 1fr .5fr;
         grid-template-areas:
             "curso_tit"
             "curso_img"
-            "curso_txt";
+            "curso_txt"
+            "curso_txt2";
     }
     
     .curso_tit {
@@ -46,15 +46,18 @@ align-items: stretch;
     }
     
     .curso_img {
+        border-radius: 2%;
         grid-area: curso_img;
-        img{
-            width: 100%;
-            height: auto;
-        }
+        width: 100%;
+        height: auto;
     }
     
     .curso_txt {
+        border-radius: 2%;
         grid-area: curso_txt;
     }
-    
+    .curso_txt2{
+        border-radius: 2%;
+        grid-area: curso_txt2;
+    }
 }

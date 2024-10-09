@@ -13,10 +13,10 @@ main.index{
         border-radius: 2%;}
         }
 }
-main.cursos {  
+.curse {  
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 0.2fr 1.8fr;
+    grid-template-rows: 0.2fr 1.5fr .8fr;
     grid-auto-columns: 1fr;
     grid-auto-rows: 1fr;
     gap: 0px 0px;
@@ -26,18 +26,27 @@ main.cursos {
     align-items: stretch;
     grid-template-areas:
         "curso_tit curso_tit"
-        "curso_img curso_txt";
+        "curso_img curso_txt"
+        "curso_txt2 curso_txt2";
 }
 
 .curso_tit { grid-area: curso_tit; }
 
 .curso_img { grid-area: curso_img; 
         border: 5px solid $claro;
+        height: auto;
+        img{
+            width: 100%;
+            height: 100%;
+        }
 }
 
 .curso_txt { grid-area: curso_txt; 
-    border-radius: 11%;
-        background-image: url(../img/border.jpg);
+        border-radius: 11%;
+        background-image: url(../img/barbershow.jpg);
+        background-size:cover;
+        height: 100%;
+        border: double 5px red;
         h3{
             font-style: italic;
             text-decoration: underline 5px $oscuro;
@@ -46,6 +55,33 @@ main.cursos {
         p{
             font-size: 1.5rem;
         }
+}
+.curso_txt2 { grid-area: curso_txt2; 
+    border-radius: 11%;
+    background-image: url(../img/border.jpg);
+    background-size:cover;
+    height: 100%;
+    border: double 5px red;
+    h3{
+        font-style: italic;
+        text-decoration: underline 5px $oscuro;
+        text-align: center;
+        &:hover{
+            transform: scale(2);
+        }
+    }
+    p{
+        font-size: 1.5rem;
+    }
+}
+.contacto {
+    background-color: white;
+    width: 99vw;
+    height: 70vh;
+    margin: .5rem;
+    padding: 1rem;
+    border: 15px solid rgb(0, 0, 0);
+    border-style: double;
 }
 
 main.cortes{
