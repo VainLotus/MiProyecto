@@ -9,11 +9,7 @@
   src: url(../font/pricedown-bl.ttf);
 }
 body {
-  background-color: rgb(10, 10, 51);
-  background-image: url(../img/grandbarberclub.jpg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background-color: #abb59e;
 }
 body h1 {
   font-family: pricedown-bl;
@@ -64,6 +60,9 @@ body p {
   -webkit-text-stroke-color: black;
 }
 
+header {
+  background-color: #abb59e;
+}
 header nav {
   background-color: rgb(10, 10, 51);
   background-image: url(../img/border.jpg);
@@ -83,10 +82,30 @@ header nav a:visited {
   -webkit-text-stroke-color: black;
 }
 
+main {
+  background-color: rgb(10, 10, 51);
+  background-image: url(../img/grandbarberclub.jpg);
+  background-position: auto;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+}
+
 main.index div img {
   width: 250px;
   border: 10px solid black;
   border-radius: 2%;
+}
+
+main.contenedor div img {
+  width: 100vw;
+  height: auto;
+  margin: 0;
+  border: 5px solid white;
+}
+main.contenedor div.cursos {
+  border-radius: 11%;
+  background-image: url(../img/border.jpg);
 }
 
 main.cortes {
@@ -105,55 +124,57 @@ main.cortes div img {
   opacity: 0.9;
   border: double black 2px;
   border-radius: 50%;
+  scale: 0.8;
 }
 main.cortes div img:hover {
-  transform: scale(1.5);
+  transform: scale(1.2);
   opacity: 1;
   border: white 2px solid;
   border-radius: 10%;
   z-index: 10;
 }
 
-main.sobrenosotros .container {
+.aboutus {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 0.9fr 1.1fr;
+  grid-template-rows: 1.5fr 0.5fr;
   grid-auto-columns: 1fr;
   grid-auto-rows: 1fr;
-  gap: 1px 1px;
+  gap: 0px 0px;
   grid-auto-flow: row;
   justify-content: center;
-  grid-template-areas: "Video Texto" "Video Texto" "Texto-1 Texto-1";
+  grid-template-areas: "barvid bartext" "bartext1 bartext1";
 }
-main.sobrenosotros .Video {
-  grid-area: Video;
+
+.barvid {
+  grid-area: barvid;
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
 }
-main.sobrenosotros .Texto {
-  grid-area: Texto;
+.barvid iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.bartext {
+  grid-area: bartext;
   background-image: url(https://img.freepik.com/foto-gratis/herramientas-salon-marco-vintage-mesa-madera-trabajos-concepto-carrera_53876-143259.jpg);
-  background-size: cover;
-  opacity: 0.9;
-  border: burlywood 15px double;
-  text-align: center;
 }
-main.sobrenosotros .Texto p {
-  font-size: 2rem;
-}
-main.sobrenosotros .Texto-1 {
-  grid-area: Texto-1;
+
+.bartext1 {
+  grid-area: bartext1;
   background-image: url(https://img.freepik.com/foto-gratis/herramientas-salon-marco-vintage-mesa-madera-trabajos-concepto-carrera_53876-143259.jpg);
-  background-size: cover;
-  opacity: 0.9;
-  border: burlywood 15px double;
-  text-align: center;
-}
-main.sobrenosotros .Texto-1 p {
-  font-size: 2rem;
 }
 
 footer {
-  display: inline-flex;
-  justify-content: center;
+  background-color: #abb59e;
 }
 footer ul li {
   list-style-type: none;
@@ -167,62 +188,31 @@ footer ul li img {
 }
 
 @media screen and (max-width: 768px) {
-  .container {
-    display: grid;
+  .aboutus {
+    grid-auto-columns: 1fr;
+    grid-auto-rows: 1fr;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-areas: "Texto" "Texto" "Texto-1" "Video" "Video";
+    grid-template-rows: 0.3fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas: "barvid" "bartext" "bartext1";
+    justify-content: space-around;
+    justify-items: stretch;
+    align-items: stretch;
   }
-  .Video {
-    grid-area: Video;
-  }
-  .Texto {
-    grid-area: Texto;
-    background-image: url(https://img.freepik.com/foto-gratis/herramientas-salon-marco-vintage-mesa-madera-trabajos-concepto-carrera_53876-143259.jpg);
-    background-size: cover;
-    opacity: 0.9;
-    border: burlywood 15px double;
-    text-align: center;
-  }
-  .Texto p {
-    font-size: 2rem;
-  }
-  .Texto-1 {
-    grid-area: Texto-1;
-    background-image: url(https://img.freepik.com/foto-gratis/herramientas-salon-marco-vintage-mesa-madera-trabajos-concepto-carrera_53876-143259.jpg);
-    background-size: cover;
-    opacity: 0.9;
-    border: burlywood 15px double;
-    text-align: center;
-  }
-  .Texto-1 p {
-    font-size: 2rem;
-  }
-  footer {
-    text-align: center;
-    justify-items: center;
+  .aboutus p {
+    font-size: 1.2rem;
+    padding-bottom: 5px;
+    padding-top: 5px;
   }
 }
-@media screen and (max-width: 480px) {
-  header nav {
-    font-size: 2rem;
-  }
-  header nav a {
-    -webkit-text-stroke-width: 0.2rem;
-    -webkit-text-stroke-color: black;
-  }
-  header nav a:visited {
-    color: white;
-    -webkit-text-stroke-width: 0.3rem;
-    -webkit-text-stroke-color: black;
-  }
-  header nav .navbar-brand {
-    align-self: center;
-  }
-  footer {
-    text-align: center;
-    justify-items: center;
-  }
+.bartext {
+  grid-area: bartext;
+  border: rgb(10, 10, 51) double 15px;
+}
+
+.bartext1 {
+  grid-area: bartext1;
+  border: rgb(10, 10, 51) double 15px;
 }
 
 /*# sourceMappingURL=newstyle.css.map */

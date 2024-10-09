@@ -1,0 +1,28 @@
+@media screen and (max-width: 768px){
+    .aboutus{
+        grid-auto-columns: 1fr; 
+grid-auto-rows: 1fr; 
+grid-template-columns: 1fr; 
+grid-template-rows: .3fr 1fr 1fr; 
+gap: 0px 0px; 
+grid-template-areas: 
+    "barvid"
+    "bartext"
+    "bartext1"; 
+justify-content: space-around; 
+justify-items: stretch; 
+align-items: stretch; 
+    p{
+        font-size: 1.2rem;
+        padding-bottom: 5px;
+        padding-top: 5px;
+    }
+}
+    }
+.bartext { grid-area: bartext;
+    border: $body-color double 15px;
+}
+
+.bartext1 { grid-area: bartext1;
+    border: $body-color double 15px ;
+}
