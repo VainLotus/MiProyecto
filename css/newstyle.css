@@ -9,7 +9,7 @@
   src: url(../font/pricedown-bl.ttf);
 }
 body {
-  background-color: #abb59e;
+  background-color: #0a0a09;
 }
 body h1 {
   font-family: pricedown-bl;
@@ -61,7 +61,7 @@ body p {
 }
 
 header {
-  background-color: #abb59e;
+  background-color: #0a0a09;
 }
 header nav {
   background-color: rgb(10, 10, 51);
@@ -245,7 +245,7 @@ main.cortes div img:hover {
 }
 
 footer {
-  background-color: #abb59e;
+  background-color: #0a0a09;
 }
 footer ul li {
   list-style-type: none;
